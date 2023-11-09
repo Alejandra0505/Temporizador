@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B54B9EFA"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextHours"
+        android:layout_width="340dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="176dp"
+        android:fontFamily="serif-monospace"
+        android:hint="Horas"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMinutes"
+        android:layout_width="340dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/editTextHours"
+        android:layout_marginTop="48dp"
+        android:fontFamily="serif-monospace"
+        android:hint="Minutos"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHours" />
+
+    <EditText
+        android:id="@+id/editTextSeconds"
+        android:layout_width="340dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/editTextMinutes"
+        android:layout_marginTop="40dp"
+        android:fontFamily="serif-monospace"
+        android:hint="Segundos"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMinutes" />
+
+    <Button
+        android:id="@+id/btnStartTimer"
+        android:layout_width="297dp"
+        android:layout_height="69dp"
+        android:layout_below="@+id/editTextSeconds"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/boton"
+        android:fontFamily="serif-monospace"
+        android:onClick="startTimer"
+        android:text="Comenzar Temporizador"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeRemaining" />
+
+    <Button
+        android:id="@+id/btndetener"
+        android:layout_width="297dp"
+        android:layout_height="69dp"
+        android:layout_below="@+id/editTextSeconds"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/boton"
+        android:fontFamily="serif-monospace"
+        android:text="Detener Temporizador"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartTimer" />
+
+    <TextView
+        android:id="@+id/tvTimeRemaining"
+        android:layout_width="301dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/btnStartTimer"
+        android:layout_marginTop="37dp"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:text="Tiempo restante: 00:00:00"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSeconds" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
